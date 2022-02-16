@@ -10,5 +10,4 @@ public class AulaDTO {
     private String nome;
     private String descricao;
     private String urlVideo;
-    private List<ComentarioDTO> comentarios;
 }

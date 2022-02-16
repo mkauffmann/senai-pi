@@ -19,6 +19,9 @@ public class Curso {
     @Column(name = "DESCRICAO", nullable = false)
     private String descricao;
 
+    @Column(name = "URL_CAPA", nullable = false)
+    private String urlCapa;
+
     @ManyToMany
     @JoinTable(
             name= "TB_CURSO_AULA",
