@@ -2,9 +2,11 @@ package br.com.senai.pi.CicloBasico.util;
 
 import br.com.senai.pi.CicloBasico.model.dto.ComentarioDTO;
 import br.com.senai.pi.CicloBasico.model.entity.Comentario;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ComentarioConv implements DTOConversion<Comentario, ComentarioDTO> {
     @Override
     public Comentario dtoToBusiness(ComentarioDTO dto) {

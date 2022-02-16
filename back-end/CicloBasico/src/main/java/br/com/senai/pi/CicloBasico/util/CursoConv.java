@@ -5,10 +5,12 @@ import br.com.senai.pi.CicloBasico.model.dto.CursoDTO;
 import br.com.senai.pi.CicloBasico.model.entity.Aula;
 import br.com.senai.pi.CicloBasico.model.entity.Curso;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CursoConv implements DTOConversion<Curso, CursoDTO> {
     @Autowired
     AulaConv aulaConv;
