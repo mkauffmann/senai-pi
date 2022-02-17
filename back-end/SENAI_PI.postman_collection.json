@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "c69ebd0d-5ff9-46c0-a4de-8c2ff3496c11",
+		"name": "SENAI_PI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar_aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\" : \"Kledir Chaves\",\n    \"email\" : \"kled@teste.com\",\n    \"senha\" : \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/alunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Aluno_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar_Aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Kledir Gomes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/alunos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir_Aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar_Curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\" : \"Spring Boot III\", \n    \"descricao\" : \"Curso avançado sobre framework Spring Boot\",\n    \"urlCapa\" : \"/teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar_Curso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"urlCapa\" : \"/teste/2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Curso_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Matricular_Aluno_Curso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos/matricula/2/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"matricula",
+						"2",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir_Curso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir_Curso_deAluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/alunos/excluirMatricula/2/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alunos",
+						"excluirMatricula",
+						"2",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

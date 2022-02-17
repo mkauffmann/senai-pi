@@ -45,7 +45,7 @@ public class AlunoConv implements DTOConversion<Aluno, AlunoDTO> {
         dto.setEmail(business.getEmail());
         dto.setSenha(business.getSenha());
 
-        if(dto.getCursos() != null){
+        if(business.getCursos() != null){
             List<CursoDTO> cursosDTO = cursoConv.businessListToDtoList(business.getCursos());
             dto.setCursos(cursosDTO);
         }

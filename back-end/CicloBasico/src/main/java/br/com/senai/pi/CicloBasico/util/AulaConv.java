@@ -12,8 +12,6 @@ import java.util.List;
 
 @Component
 public class AulaConv implements DTOConversion<Aula, AulaDTO> {
-    @Autowired
-    ComentarioConv comentarioConv;
 
     @Override
     public Aula dtoToBusiness(AulaDTO dto) {
@@ -27,10 +25,6 @@ public class AulaConv implements DTOConversion<Aula, AulaDTO> {
         aula.setDescricao(dto.getDescricao());
         aula.setUrlVideo(dto.getUrlVideo());
 
-//        if(dto.getComentarios() != null){
-//            List<Comentario> comentarios = comentarioConv.dtoListToBusinessList(dto.getComentarios());
-//            aula.setComentarios(comentarios);
-//        }
 
         return aula;
     }
