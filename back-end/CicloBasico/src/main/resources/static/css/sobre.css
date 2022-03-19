@@ -1,0 +1,40 @@
+iframe {
+    width: 100%;
+    height: calc(80vw / 1.7);
+}
+
+.container-foto-pessoa {
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+}
+
+.container-foto-pessoa img {
+    max-width: 300px;
+    position: relative;
+}
+
+.pessoa-2 {
+    left: -50px;
+}
+
+.pessoa-3 {
+    top: -40px;
+    right: 40px;
+}
+
+.pessoa-4 {
+    top: -100px;
+    right: 40px;
+}
+
+.descricao-pessoa h4 {
+    color: #E89548;
+}
+
+.descricao-pessoa h5 {
+    color: #98BFE5;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/css/modal.css}"/>
+    <link rel="stylesheet" th:href="@{/css/shared.css}"/>
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<!-- begin nav  -->
+<nav>
+    <a href="index.html">
+        <img
+                class="nav-logo"
+                th:src="@{/imagens/logo_CB-03.png}"
+                alt="Ciclo Básico"
+        />
+    </a>
+
+    <ul class="nav-items">
+        <div class="nav-links closed">
+            <li class="nav-item"><a
+                    href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item"><a
+                    href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/contato.html">Contato</a></li>
+            <li class="nav-item login login-mobile">
+                <a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/login.html">Entrar</a>
+            </li>
+        </div>
+        <li class="nav-item busca-container">
+            <input
+                    class="busca custom-input"
+                    type="text"
+                    name="busca"
+                    placeholder="Pesquisar"
+            />
+        </li>
+        <a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/login.html"
+        >
+            <li class="nav-item login login-desktop">Entrar</li>
+        </a
+        >
+    </ul>
+    <div class="mobile-nav-icon closed">
+        <span class="hamburger hamburger-1"> </span>
+        <span class="hamburger hamburger-2"> </span>
+        <span class="hamburger hamburger-3"> </span>
+    </div>
+</nav>
+<!-- end nav  -->
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+></script>
+<script th:src="@{/javascript/modal.js}"></script>
+<script th:src="@{/javascript/script.js}"></script>
+</body>
+</html>

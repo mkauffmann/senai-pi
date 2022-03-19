@@ -1,0 +1,14 @@
+.cadastro {
+    background-color: #98BFE5;
+}
+
+.img-cadastro {
+    background-image: url(../imagens/cadastro.jpg);
+    background-size: cover;
+}
+
+.cursos .foto {
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+}
