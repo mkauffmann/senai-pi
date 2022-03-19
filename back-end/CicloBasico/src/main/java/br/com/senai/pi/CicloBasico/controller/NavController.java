@@ -31,4 +31,9 @@ public class NavController {
         return "contato";
     }
 
+    @GetMapping("/curso")
+    public String curso(){
+        return "curso";
+    }
+
 }
