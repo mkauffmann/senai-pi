@@ -7,7 +7,7 @@
     <div class="footer-container">
         <div class="footer-info">
             <img
-                    src="../static/imagens/logo_CB-03.png"
+                    th:src="@{/imagens/logo_CB-03.png}"
                     alt="Ciclo Básico"
                     class="footer-logo mb-3"
             />
@@ -25,10 +25,10 @@
         <div class="footer-nav">
             <ul class="footer-nav-items">
                 <div class="footer-nav-links">
-                    <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/catalogo.html">Catálogo</a></li>
-                    <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/sobre.html">Sobre</a></li>
-                    <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/contato.html">Contato</a></li>
-                    <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/login.html">Entrar</a></li>
+                    <li class="nav-item"><a href="#" th:href="@{/catalogo}">Catálogo</a></li>
+                    <li class="nav-item"><a href="#" th:href="@{/sobre}">Sobre</a></li>
+                    <li class="nav-item"><a href="#" th:href="@{/contato}">Contato</a></li>
+                    <li class="nav-item"><a href="#" th:href="@{/login}">Entrar</a></li>
                 </div>
                 <li class="nav-item busca-footer">
                     <input

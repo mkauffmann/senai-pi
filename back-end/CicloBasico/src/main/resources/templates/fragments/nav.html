@@ -13,7 +13,7 @@
 <body>
 <!-- begin nav  -->
 <nav>
-    <a href="index.html">
+    <a href="#" th:href="@{/}">
         <img
                 class="nav-logo"
                 th:src="@{/imagens/logo_CB-03.png}"
@@ -23,15 +23,10 @@
 
     <ul class="nav-items">
         <div class="nav-links closed">
-            <li class="nav-item"><a
-                    href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/catalogo.html">Catálogo</a></li>
-            <li class="nav-item"><a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/sobre.html">Sobre</a>
-            </li>
-            <li class="nav-item"><a
-                    href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/contato.html">Contato</a></li>
-            <li class="nav-item login login-mobile">
-                <a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/login.html">Entrar</a>
-            </li>
+            <li class="nav-item"><a href="#" th:href="@{/catalogo}">Catálogo</a></li>
+            <li class="nav-item"><a href="#" th:href="@{/sobre}">Sobre</a></li>
+            <li class="nav-item"><a href="#" th:href="@{/contato}">Contato</a></li>
+            <li class="nav-item login login-mobile"><a href="#" th:href="@{/login}">Entrar</a></li>
         </div>
         <li class="nav-item busca-container">
             <input
@@ -41,11 +36,9 @@
                     placeholder="Pesquisar"
             />
         </li>
-        <a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/login.html"
-        >
+        <a href="#" th:href="@{/login}">
             <li class="nav-item login login-desktop">Entrar</li>
-        </a
-        >
+        </a>
     </ul>
     <div class="mobile-nav-icon closed">
         <span class="hamburger hamburger-1"> </span>
