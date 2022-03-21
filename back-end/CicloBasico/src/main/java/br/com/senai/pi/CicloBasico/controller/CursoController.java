@@ -4,19 +4,23 @@ import br.com.senai.pi.CicloBasico.model.dto.CursoDTO;
 import br.com.senai.pi.CicloBasico.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/cursos")
+@Controller
+@RequestMapping("/curso")
 public class CursoController {
     @Autowired
     CursoService cursoService;
 
     @GetMapping("/{id}")
-    public CursoDTO buscarCursoId(@PathVariable("id") Long id){
-        return cursoService.buscarCursoPorId(id);
+    public ModelAndView buscarCursoId(@PathVariable("id") Long id){
+        ModelAndView mv = new ModelAndView("curso");
+        mv.addObject(cursoService.buscarCursoPorId(id));
+        return mv;
     }
 
     @GetMapping

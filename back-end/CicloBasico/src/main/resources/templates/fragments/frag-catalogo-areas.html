@@ -10,17 +10,16 @@
                 <h2>O que você quer descobrir hoje?</h2>
                 <h3>Conheça nossos cursos</h3>
             </div>
-            <div
-                    class="col-6 col-lg-3 d-flex flex-column justify-content-between"
-            >
+
+            <div class="col-6 col-lg-3 d-flex flex-column justify-content-between" th:fragment="cardCurso (nome, imgName)" >
                 <img
-                        th:src="@{/imagens/biologicas.jpg}"
-                        alt="Borboleta"
+                        th:src="@{${'/imagens/' + imgName}}"
+                        alt=""
                         class="foto img-fluid my-3"
                 />
-                <a href="../../../../../../../UC08/conv_thymeleaf/ciclo-basico/catalogo.html" class="botao text-center mb-3"
-                >Biológicas</a
-                >
+                <a href="#" th:href="@{/catalogo}" class="botao text-center mb-3" th:text="${nome}">
+                    Titulo
+                </a>
             </div>
             <div
                     class="col-6 col-lg-3 d-flex flex-column justify-content-between"

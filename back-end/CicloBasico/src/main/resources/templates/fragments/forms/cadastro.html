@@ -2,38 +2,66 @@
 <head>
 </head>
 <body>
-<form>
-    <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
-        <input
-                type="text"
-                class="form-control custom-input"
-                id="nome"
-                placeholder="Digite seu nome"
-        />
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
-                type="email"
-                class="form-control custom-input"
-                id="email"
-                placeholder="Digite seu email"
-        />
-    </div>
-    <div class="mb-3">
-        <label for="senha" class="form-label">Senha</label>
-        <input
-                type="password"
-                class="form-control custom-input"
-                id="senha"
-                placeholder="Digite sua senha"
-        />
-    </div>
-    <div class="mb-3 text-center">
-        <button type="submit" class="botao">Cadastrar</button>
+<p th:if="${sucesso != null}" th:text="@{'Aluno cadastrado com sucesso!'}" class="alert alert-success"/>
+
+<form th:action="@{/cadastro}" method="post" th:object="${alunoDTO}">
+    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}" class="alert alert-danger"/>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input
+                            type="text"
+                            class="form-control custom-input"
+                            id="nome"
+                            th:field="*{nome}"
+                            placeholder="Digite seu nome"
+                    />
+                    <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                            type="email"
+                            class="form-control custom-input"
+                            id="email"
+                            th:field="*{email}"
+                            placeholder="Digite seu email"
+                    />
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" />
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Crie uma senha<span class="campo-obrigatorio">*</span></label>
+                    <input type="password"
+                           name="senha"
+                           id="senha"
+                           class="form-control custom-input"
+                           th:field="*{senha}"
+                           placeholder="Digite sua senha" >
+                    <span th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}" />
+                </div>
+                <div class="mb-3">
+                    <label for="senha-confirmar" class="form-label">Confirme sua senha<span class="campo-obrigatorio">*</span></label>
+                    <input type="password"
+                           name="senha-confirmar"
+                           id="senha-confirmar"
+                           th:field="*{confirmaSenha}"
+                           class="form-control custom-input"
+                           placeholder="Confirme sua senha" >
+                    <span th:if="${#fields.hasErrors('confirmaSenha')}" th:errors="*{confirmaSenha}" />
+                </div>
+
+            </div>
+            <div class="row justify-content-end">
+                <div class="mb-3 text-center col-12 col-md-3">
+                    <button type="submit" class="botao">Cadastrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </form>
-
 </body>
 </html>

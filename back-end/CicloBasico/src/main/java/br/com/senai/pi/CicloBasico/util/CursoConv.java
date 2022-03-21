@@ -52,6 +52,8 @@ public class CursoConv implements DTOConversion<Curso, CursoDTO> {
             dto.setAulas(dtoList);
         }
 
+        dto.setData(business.getData());
+
         return dto;
     }
 

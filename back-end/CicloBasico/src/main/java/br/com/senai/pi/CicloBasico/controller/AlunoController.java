@@ -4,13 +4,21 @@ import br.com.senai.pi.CicloBasico.model.dto.AlunoDTO;
 import br.com.senai.pi.CicloBasico.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@RestController
-@RequestMapping("/alunos")
-public class AlunoController {
+@Controller
+public class AlunoController implements WebMvcConfigurer{
     @Autowired
     AlunoService alunoService;
 
@@ -24,11 +32,18 @@ public class AlunoController {
         return alunoService.encontrarAlunoPorId(id);
     }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public AlunoDTO adicionarAluno(@RequestBody AlunoDTO dto){
-        return alunoService.adicionarNovoAluno(dto);
-    }
+//    @PostMapping("/cadastro")
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public ModelAndView adicionarAluno(@ModelAttribute("alunoDTO") @Valid AlunoDTO dto, BindingResult result){
+//        //ModelAndView mv = new ModelAndView("fragments/forms/cadastro");
+//        if(result.hasErrors()){
+////            mv.addObject("alunoCadastro", dto);
+//            return new ModelAndView("login", result.getModel());
+//        }
+//        alunoService.adicionarNovoAluno(dto);
+//      //  mv.addObject("alunoCadastro", new AlunoDTO());
+//        return new ModelAndView("login", "alunoCadastro", new AlunoDTO());
+//    }
 
     @PutMapping("/{id}")
     public AlunoDTO editarAluno(@RequestBody AlunoDTO dto, @PathVariable("id") Long id){

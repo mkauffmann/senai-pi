@@ -1,13 +1,16 @@
 package br.com.senai.pi.CicloBasico.controller;
 
+import br.com.senai.pi.CicloBasico.model.dto.AlunoDTO;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NavController {
 
     @GetMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("alunoDTO", new AlunoDTO());
         return "index";
     }
 
@@ -22,7 +25,8 @@ public class NavController {
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String login(Model model){
+        model.addAttribute("alunoDTO", new AlunoDTO());
         return "login";
     }
 
@@ -31,9 +35,5 @@ public class NavController {
         return "contato";
     }
 
-    @GetMapping("/curso")
-    public String curso(){
-        return "curso";
-    }
 
 }

@@ -62,10 +62,21 @@
           </div>
         </div>
       </section>
+      <section class="cursos mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center my-3">
+              <h2>O que você quer descobrir hoje?</h2>
+              <h3>Conheça nossos cursos</h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div th:include="fragments/catalogo"></div>
+      <div th:include="fragments/frag-catalogo-areas"></div>
       <div th:include="fragments/parcerias"></div>
     </main>
     <div th:include="fragments/footer"></div>
+<!--    <div th:replace="fragments/frag-catalogo-areas :: cardCurso ('biologicas', 'biologicas.jpg')"></div>-->
   </body>
 </html>

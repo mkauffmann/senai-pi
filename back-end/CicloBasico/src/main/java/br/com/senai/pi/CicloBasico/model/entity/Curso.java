@@ -3,6 +3,7 @@ package br.com.senai.pi.CicloBasico.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity(name = "TB_CURSO")
@@ -21,6 +22,9 @@ public class Curso {
 
     @Column(name = "URL_CAPA", nullable = false)
     private String urlCapa;
+
+    @Column(name = "DATA_ADICIONADO", nullable = false)
+    private LocalDate data;
 
     @ManyToMany
     @JoinTable(
