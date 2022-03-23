@@ -32,18 +32,6 @@ public class AlunoController implements WebMvcConfigurer{
         return alunoService.encontrarAlunoPorId(id);
     }
 
-//    @PostMapping("/cadastro")
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public ModelAndView adicionarAluno(@ModelAttribute("alunoDTO") @Valid AlunoDTO dto, BindingResult result){
-//        //ModelAndView mv = new ModelAndView("fragments/forms/cadastro");
-//        if(result.hasErrors()){
-////            mv.addObject("alunoCadastro", dto);
-//            return new ModelAndView("login", result.getModel());
-//        }
-//        alunoService.adicionarNovoAluno(dto);
-//      //  mv.addObject("alunoCadastro", new AlunoDTO());
-//        return new ModelAndView("login", "alunoCadastro", new AlunoDTO());
-//    }
 
     @PutMapping("/{id}")
     public AlunoDTO editarAluno(@RequestBody AlunoDTO dto, @PathVariable("id") Long id){

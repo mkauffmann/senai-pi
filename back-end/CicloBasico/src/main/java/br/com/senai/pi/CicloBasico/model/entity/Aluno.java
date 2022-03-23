@@ -16,13 +16,13 @@ public class Aluno {
     @Column(name = "NOME", nullable = false)
     private String nome;
 
-    @Column(name = "EMAIL", nullable = false)
+    @Column(name = "EMAIL", nullable = false, unique = true)
     private String email;
 
     @Column(name = "SENHA", nullable = false)
     private String senha;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable(
             name= "TB_ALUNO_CURSO",
             joinColumns = {@JoinColumn(name = "ID_ALUNO")},

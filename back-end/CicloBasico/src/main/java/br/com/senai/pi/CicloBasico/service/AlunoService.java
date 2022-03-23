@@ -8,6 +8,7 @@ import br.com.senai.pi.CicloBasico.repository.AlunoRepository;
 import br.com.senai.pi.CicloBasico.util.AlunoConv;
 import br.com.senai.pi.CicloBasico.util.CursoConv;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,8 +28,15 @@ public class AlunoService {
     @Autowired
     CursoService cursoService;
 
+    @Autowired
+    PasswordEncoder encoder;
+
     public AlunoDTO adicionarNovoAluno(AlunoDTO dto){
         Aluno aluno = alunoConv.dtoToBusiness(dto);
+
+        String encodedSenha = encoder.encode(aluno.getSenha());
+        aluno.setSenha(encodedSenha);
+
         aluno = alunoRepository.save(aluno);
         return alunoConv.businessToDto(aluno);
     }

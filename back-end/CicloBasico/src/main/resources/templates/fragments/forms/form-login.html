@@ -3,14 +3,14 @@
 <head>
 </head>
 <body>
-<form>
+<form th:action="@{/login}" method="post" >
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control custom-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control custom-input" id="email" name="username" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" class="form-control custom-input" id="exampleInputPassword1">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control custom-input" id="senha" name="password">
     </div>
     <button type="submit" class="botao">Entrar</button>
 </form>
