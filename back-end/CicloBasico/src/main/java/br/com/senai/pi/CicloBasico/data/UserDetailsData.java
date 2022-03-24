@@ -16,6 +16,10 @@ public class UserDetailsData implements UserDetails {
         this.aluno = aluno;
     }
 
+    public Aluno getAluno(){
+        return this.aluno.orElse(new Aluno());
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return new ArrayList<>();

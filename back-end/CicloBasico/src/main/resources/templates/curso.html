@@ -37,6 +37,9 @@
             class="img-fluid foto"/>
           </div>
         </div>
+        <form sec:authorize="isAuthenticated()" th:action="@{${'/matricula/'+ #authentication.getPrincipal().getAluno().getId() + '/' + cursoDTO.id}}" method="post">
+          <button type="submit" class="botao" sec:authorize="isAuthenticated()" >Fazer matrícula</button>
+        </form>
         <div class="row mt-3">
           <h4>Aulas</h4>
           <table class="table table-hover">

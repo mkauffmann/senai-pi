@@ -26,7 +26,8 @@
             <li class="nav-item"><a href="#" th:href="@{/catalogo}">Catálogo</a></li>
             <li class="nav-item"><a href="#" th:href="@{/sobre}">Sobre</a></li>
             <li class="nav-item"><a href="#" th:href="@{/contato}">Contato</a></li>
-            <li class="nav-item login login-mobile"><a href="#" th:href="@{/login}">Entrar</a></li>
+            <li class="nav-item login login-mobile"><a href="#" th:href="@{/login}" sec:authorize="!isAuthenticated()">Entrar</a></li>
+            <li class="nav-item login login-mobile"><a href="/logout" sec:authorize="isAuthenticated()">Sair</a></li>
         </div>
         <li class="nav-item busca-container">
             <input
@@ -37,7 +38,10 @@
             />
         </li>
         <a href="#" th:href="@{/login}">
-            <li class="nav-item login login-desktop">Entrar</li>
+            <li class="nav-item login login-desktop" sec:authorize="!isAuthenticated()">Entrar</li>
+        </a>
+        <a href="/logout" >
+            <li class="nav-item login login-desktop" sec:authorize="isAuthenticated()">Sair</li>
         </a>
     </ul>
     <div class="mobile-nav-icon closed">

@@ -23,25 +23,25 @@ public class CursoController {
         return mv;
     }
 
-    @GetMapping
-    public List<CursoDTO> listarCursos(){
-        return cursoService.listarCursos();
-    }
-
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public CursoDTO adicionarAluno(@RequestBody CursoDTO dto){
-        return cursoService.adicionarCurso(dto);
-    }
-
-    @PutMapping("/{id}")
-    public CursoDTO editarAluno(@RequestBody CursoDTO dto, @PathVariable("id") Long id){
-        return cursoService.editarCurso(dto, id);
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void excluirAluno(@PathVariable("id") Long id){
-        cursoService.excluirCurso(id);
-    }
+//    @GetMapping
+//    public List<CursoDTO> listarCursos(){
+//        return cursoService.listarCursos();
+//    }
+//
+//    @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public CursoDTO adicionarAluno(@RequestBody CursoDTO dto){
+//        return cursoService.adicionarCurso(dto);
+//    }
+//
+//    @PutMapping("/{id}")
+//    public CursoDTO editarAluno(@RequestBody CursoDTO dto, @PathVariable("id") Long id){
+//        return cursoService.editarCurso(dto, id);
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void excluirAluno(@PathVariable("id") Long id){
+//        cursoService.excluirCurso(id);
+//    }
 }

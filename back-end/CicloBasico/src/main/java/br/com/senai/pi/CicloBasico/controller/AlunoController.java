@@ -19,38 +19,38 @@ import java.util.Map;
 
 @Controller
 public class AlunoController implements WebMvcConfigurer{
-    @Autowired
-    AlunoService alunoService;
-
-    @GetMapping
-    public List<AlunoDTO> listarAlunos(){
-        return alunoService.listarAlunos();
-    }
-
-    @GetMapping("/{id}")
-    public AlunoDTO buscarAlunoPorId(@PathVariable("id") Long id){
-        return alunoService.encontrarAlunoPorId(id);
-    }
-
-
-    @PutMapping("/{id}")
-    public AlunoDTO editarAluno(@RequestBody AlunoDTO dto, @PathVariable("id") Long id){
-        return alunoService.editarAluno(dto, id);
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void excluirAluno(@PathVariable("id") Long id){
-        alunoService.excluirAluno(id);
-    }
-
-    @PutMapping("/matricula/{idAluno}/{idCurso}")
-    public AlunoDTO matricularAlunoCurso(@PathVariable("idAluno") Long idAluno, @PathVariable("idCurso") Long idCurso){
-        return alunoService.matricularAlunoEmCurso(idAluno, idCurso);
-    }
-
-    @PutMapping("/excluirMatricula/{idAluno}/{idCurso}")
-    public AlunoDTO excluirCursoDeAluno(@PathVariable("idAluno") Long idAluno, @PathVariable("idCurso") Long idCurso){
-        return alunoService.excluirCursoDeAluno(idAluno, idCurso);
-    }
+//    @Autowired
+//    AlunoService alunoService;
+//
+//    @GetMapping
+//    public List<AlunoDTO> listarAlunos(){
+//        return alunoService.listarAlunos();
+//    }
+//
+//    @GetMapping("/{id}")
+//    public AlunoDTO buscarAlunoPorId(@PathVariable("id") Long id){
+//        return alunoService.encontrarAlunoPorId(id);
+//    }
+//
+//
+//    @PutMapping("/{id}")
+//    public AlunoDTO editarAluno(@RequestBody AlunoDTO dto, @PathVariable("id") Long id){
+//        return alunoService.editarAluno(dto, id);
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void excluirAluno(@PathVariable("id") Long id){
+//        alunoService.excluirAluno(id);
+//    }
+//
+//    @PutMapping("/matricula/{idAluno}/{idCurso}")
+//    public AlunoDTO matricularAlunoCurso(@PathVariable("idAluno") Long idAluno, @PathVariable("idCurso") Long idCurso){
+//        return alunoService.matricularAlunoEmCurso(idAluno, idCurso);
+//    }
+//
+//    @PutMapping("/excluirMatricula/{idAluno}/{idCurso}")
+//    public AlunoDTO excluirCursoDeAluno(@PathVariable("idAluno") Long idAluno, @PathVariable("idCurso") Long idCurso){
+//        return alunoService.excluirCursoDeAluno(idAluno, idCurso);
+//    }
 }
