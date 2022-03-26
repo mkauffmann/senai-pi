@@ -20,12 +20,30 @@
     />
     <link rel="stylesheet" th:href="@{/css/modal.css}" />
     <link rel="stylesheet" th:href="@{/css/shared.css}" />
-    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" th:href="@{/css/aula.css}" />
 </head>
 <body>
 <div th:insert="fragments/nav"></div>
 <main>
-
+<div class="container my-5">
+    <h3 th:text="${nomeCurso}"></h3>
+    <h2 th:text="${aulaDTO.nome}"></h2>
+    <div class="row my-3">
+        <div class="col-12 col-md-6">
+            <p th:text="${aulaDTO.descricao}"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 container-video">
+            <iframe th:src="${'https://www.youtube.com/embed/' + aulaDTO.urlVideo}"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="iframe-video"></iframe>
+        </div>
+    </div>
+</div>
 </main>
 <div th:include="fragments/footer"></div>
 </body>
