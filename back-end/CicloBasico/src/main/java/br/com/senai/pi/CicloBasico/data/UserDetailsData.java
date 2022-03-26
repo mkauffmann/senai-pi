@@ -1,5 +1,6 @@
 package br.com.senai.pi.CicloBasico.data;
 
+import br.com.senai.pi.CicloBasico.model.dto.AlunoDTO;
 import br.com.senai.pi.CicloBasico.model.entity.Aluno;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -86,6 +86,22 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 
+    public Boolean alunoEstaMatriculadoEmCurso(Long idAluno, Long idCurso){
+        Optional<Aluno> op = alunoRepository.findById(idAluno);
+        CursoDTO cursoDTO = cursoService.buscarCursoPorId(idCurso);
+
+        if(op.isPresent() && cursoDTO != null){
+            AlunoDTO alunoDTO = alunoConv.businessToDto(op.get());
+
+            if(alunoDTO.getCursos().contains(cursoDTO)){
+                return true;
+            }
+            return false;
+        }
+
+        return null;
+    }
+
     public AlunoDTO matricularAlunoEmCurso(Long idAluno, Long idCurso){
         Optional<Aluno> op = alunoRepository.findById(idAluno);
         CursoDTO cursoDTO = cursoService.buscarCursoPorId(idCurso);

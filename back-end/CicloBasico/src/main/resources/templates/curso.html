@@ -30,16 +30,21 @@
           <div class="col-12 col-md-6">
             <h2 th:text="${cursoDTO.nome}">Título do curso</h2>
             <p th:text="${cursoDTO.descricao}">Descrição</p>
-            <button></button>
           </div>
           <div class="col-12 d-none d-md-block col-md-6">
             <img  th:src="@{${'/imagens/capas/'+ cursoDTO.urlCapa}}"
             class="img-fluid foto"/>
           </div>
         </div>
-        <form sec:authorize="isAuthenticated()" th:action="@{${'/matricula/'+ #authentication.getPrincipal().getAluno().getId() + '/' + cursoDTO.id}}" method="post">
-          <button type="submit" class="botao" sec:authorize="isAuthenticated()" >Fazer matrícula</button>
-        </form>
+        <div sec:authorize="isAuthenticated()">
+          <form th:action="@{${'/matricula/'+ #authentication.getPrincipal().getAluno().getId() + '/' + cursoDTO.id}}" method="post">
+            <button type="submit"
+                    class="botao">
+              Fazer matrícula
+            </button>
+            <p th:if="${param.erro != null}" th:text="@{'Você já está cadastrado neste curso'}" class="alert alert-success"/>
+          </form>
+        </div>
         <div class="row mt-3">
           <h4>Aulas</h4>
           <table class="table table-hover">

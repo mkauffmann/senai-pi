@@ -19,11 +19,6 @@ public class NavController {
         return "sobre";
     }
 
-    @GetMapping("/catalogo")
-    public String catalogo(){
-        return "catalogo";
-    }
-
     @GetMapping("/login")
     public String login(Model model){
         model.addAttribute("alunoDTO", new AlunoDTO());

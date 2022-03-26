@@ -1,6 +1,7 @@
 package br.com.senai.pi.CicloBasico.service;
 
 import br.com.senai.pi.CicloBasico.data.UserDetailsData;
+import br.com.senai.pi.CicloBasico.model.dto.AlunoDTO;
 import br.com.senai.pi.CicloBasico.model.entity.Aluno;
 import br.com.senai.pi.CicloBasico.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
