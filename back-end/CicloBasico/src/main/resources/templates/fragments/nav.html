@@ -27,6 +27,7 @@
             <li class="nav-item"><a href="#" th:href="@{/sobre}">Sobre</a></li>
             <li class="nav-item"><a href="#" th:href="@{/contato}">Contato</a></li>
             <li class="nav-item login login-mobile"><a href="#" th:href="@{/login}" sec:authorize="!isAuthenticated()">Entrar</a></li>
+            <li class="nav-item login login-mobile"><a href="/aluno" sec:authorize="isAuthenticated()">Meu perfil</a></li>
             <li class="nav-item login login-mobile"><a href="/logout" sec:authorize="isAuthenticated()">Sair</a></li>
         </div>
         <li class="nav-item busca-container">
@@ -39,6 +40,9 @@
         </li>
         <a href="#" th:href="@{/login}">
             <li class="nav-item login login-desktop" sec:authorize="!isAuthenticated()">Entrar</li>
+        </a>
+        <a href="/aluno" >
+            <li class="nav-item login login-desktop" sec:authorize="isAuthenticated()">Meu perfil</li>
         </a>
         <a href="/logout" >
             <li class="nav-item login login-desktop" sec:authorize="isAuthenticated()">Sair</li>

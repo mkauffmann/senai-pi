@@ -30,5 +30,6 @@ public class NavController {
         return "contato";
     }
 
-
+    @GetMapping("/aluno")
+    public String aluno() {return "aluno";}
 }

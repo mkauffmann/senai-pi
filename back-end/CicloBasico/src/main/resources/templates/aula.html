@@ -25,26 +25,7 @@
 <body>
 <div th:insert="fragments/nav"></div>
 <main>
-    <div class="container my-3">
-        <h2>Olá <span th:text="${#authentication.getPrincipal().getAluno().getNome()}"/>!</h2>
-        <div class="row mt-3">
-            <h3>Meus cursos:</h3>
-            <table class="table table-hover">
-                <thead>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                </thead>
-                <tbody>
-                <tr th:each="curso : ${#authentication.getPrincipal().getAluno().getCursos()}">
-                    <td th:text="${curso.nome}"/>
-                    <td th:text="${curso.descricao}"/>
-                    <td><a th:href="@{${'/curso/' + curso.id}}">Acessar curso</a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    </div>
+
 </main>
 <div th:include="fragments/footer"></div>
 </body>

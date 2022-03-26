@@ -56,7 +56,7 @@
       </header>
       <section class="cadastro p-5">
         <div class="row justify-content-between">
-          <div class="col-12 col-md-6">
+          <div class="col-12">
             <h2 class="text-center">Cadastre-se e participe</h2>
             <div th:include="fragments/forms/cadastro"></div>
           </div>
@@ -67,13 +67,11 @@
           <div class="row">
             <div class="col-12 text-center my-3">
               <h2>O que você quer descobrir hoje?</h2>
-              <h3>Conheça nossos cursos</h3>
+              <h3><a th:href="@{/catalogo}">Conheça nossos cursos</a></h3>
             </div>
           </div>
         </div>
       </section>
-
-      <div th:include="fragments/frag-catalogo-areas"></div>
       <div th:include="fragments/parcerias"></div>
     </main>
     <div th:include="fragments/footer"></div>

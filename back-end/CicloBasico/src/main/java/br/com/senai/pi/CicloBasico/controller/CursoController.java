@@ -33,7 +33,6 @@ public class CursoController {
         if(alunoService.alunoEstaMatriculadoEmCurso(idAluno, idCurso)){
             model.addAttribute("erro");
             return "redirect:/curso/" + idCurso + "?erro=erro";
-
         }
 
         AlunoDTO dto = alunoService.matricularAlunoEmCurso(idAluno, idCurso);
@@ -46,6 +45,12 @@ public class CursoController {
         ModelAndView mv = new ModelAndView("catalogo");
         mv.addObject(listaCursos);
         return mv;
+    }
+
+    @GetMapping("/excluirMatricula/{idAluno}/{idCurso}")
+    public String excluirCursoDeAluno(@PathVariable("idAluno") Long idAluno, @PathVariable("idCurso") Long idCurso){
+        alunoService.excluirCursoDeAluno(idAluno, idCurso);
+        return "redirect:/aluno";
     }
 
 }
