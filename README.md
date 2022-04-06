@@ -34,49 +34,35 @@ Site **fictício** de cursos online, com foco em conteúdo introdutório de disc
 
 ### Telas
 ##### Home
-<p>
-<img width="100%" alt="Captura de Tela Home" src="https://user-images.githubusercontent.com/70024598/162081864-c413b04b-15ae-4b57-a3b9-f939a64c21db.png">
+<img width="1280" alt="home" src="https://user-images.githubusercontent.com/70024598/162090068-cbec7f8d-a25e-4187-aede-cc121e835515.png">
 
-<img width="100%" alt="Captura de Tela Home" src="https://user-images.githubusercontent.com/70024598/162081926-d03e6927-8ac1-4b8f-bb92-6dede2196f59.png">
-
-<img width="100%" alt="Captura de Tela Home" src="https://user-images.githubusercontent.com/70024598/162081954-bffeb739-487a-4b0e-b91b-31da3d104917.png">
-</p>
 
 ---
 
 ##### Página do Curso
-<p>
-<img width="100%" alt="Captura de Tela Curso" src="https://user-images.githubusercontent.com/70024598/162082041-de9cd798-a820-4164-84ad-1cc74b9f8fa7.png">
-<img width="100%" alt="Captura de Tela Curso" src="https://user-images.githubusercontent.com/70024598/162082074-302033eb-1572-4065-b707-3df96b776e41.png">
-  </p>
+<img width="1279" alt="curso" src="https://user-images.githubusercontent.com/70024598/162090091-5cca490d-b640-4665-b936-fb0235109ea2.png">
+
 
 ---
 
 #### Página da Aula
 
-<img width="100%" alt="Captura de Tela Aula" src="https://user-images.githubusercontent.com/70024598/162082250-238a5d82-4627-4e12-bb28-bc8d532fa927.png">
+<img width="1280" alt="aula" src="https://user-images.githubusercontent.com/70024598/162090142-be2a6c43-3fab-49f7-92d6-c0385b2c8fcc.png">
+
 
 ---
 
 #### Página de Login e Cadastro
 
-<p>
-<img width="100%" alt="Captura de Tela Login" src="https://user-images.githubusercontent.com/70024598/162082424-f44586f4-0590-415e-a4e4-207579f3dcf9.png">
+<img width="1280" alt="login_cadastro" src="https://user-images.githubusercontent.com/70024598/162090156-e8df9c23-12ed-48e7-aa1f-7ff09ce7cb7b.png">
 
-<img wwidth="100%" alt="Captura de Tela Cadastro" src="https://user-images.githubusercontent.com/70024598/162082452-fbb4ee5b-e25a-406a-910c-6e8d04e1ea71.png">
-
-  </p>
 
 ---
 
-#### Home com usuário logado
-
-<img width="100%" alt="Captura de Tela Home" src="https://user-images.githubusercontent.com/70024598/162082543-41268e72-7f25-4122-bb81-ac382e3b11f5.png">
-
----
 
 #### Página de curso com usuário logado
-<img width="100%" alt="Captura de Tela Curso" src="https://user-images.githubusercontent.com/70024598/162082607-d447f512-31ef-4279-bf92-013066dc28bb.png">
+
+<img width="1280" alt="curso_logado" src="https://user-images.githubusercontent.com/70024598/162090188-af6fd593-b72e-47ad-99f5-5b507b7ba3ea.png">
 
 ---
 
@@ -87,5 +73,17 @@ Site **fictício** de cursos online, com foco em conteúdo introdutório de disc
 
 #### Página de Meu Perfil
 
-<img width="100%" alt="Captura de Tela Meu Perfil" src="https://user-images.githubusercontent.com/70024598/162082757-6b67507a-7806-4772-8398-ae0ad46e018e.png">
+<img width="1280" alt="meu_perfil" src="https://user-images.githubusercontent.com/70024598/162090218-4a592bbf-0a75-48ef-8676-417a2fdbd2e6.png">
+
+---
+
+#### Sobre
+
+<img width="1278" alt="sobre" src="https://user-images.githubusercontent.com/70024598/162090302-5411375a-dd2f-4192-a00c-f5a4d255b098.png">
+
+---
+
+#### Contato
+<img width="1280" alt="contato" src="https://user-images.githubusercontent.com/70024598/162090354-71f767e7-bdde-41be-9784-4045171b42fb.png">
+
 
